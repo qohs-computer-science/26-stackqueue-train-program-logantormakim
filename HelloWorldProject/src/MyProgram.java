@@ -1,8 +1,8 @@
 /*
- * TODO: Name
- * TODO: Date
- * TODO: Class Period
- * TODO: Program Description
+ * TODO: Logan Torma-Kim
+ * TODO: 1/13/2025
+ * TODO: 3
+ * TODO: Program Description _______________________________________________________________________________________________________________________
  */
 import java.util.Scanner;
 import java.io.File;
@@ -28,4 +28,19 @@ public class MyProgram {
 			System.out.println(e.getMessage());
 		}
 	}
+	Queue <Train> track0 = new LinkedList <>();
+	Queue <Train> track1 = new LinkedList <>();
+	Stack <Train> trackA = new Stack <>();
+	Stack <Train> trackB = new Stack <>();
+	Stack <Train> trackC = new Stack <>();
+	Stack <Train> trackD = new Stack <>(); 
+
+	try {
+		File f = new File(HelloWorldProject/src/data.txt);
+		x = new scanner (f);
+	} // end try
+	catch (Exception e)
+	{
+		System.out.println(e.getMessage());
+	} // end catch
 }
