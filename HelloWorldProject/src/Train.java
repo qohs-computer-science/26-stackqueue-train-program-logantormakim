@@ -4,12 +4,12 @@ public class Train {
 
     // car constructor
     public Train(String carName, String contents, String ogCity, String dest, int w, int m) {
-        carName = name;
-       contents  = product;
-        origin = ogCity;
-        dest = destination;
-        w = weight;
-        m = miles; 
+        name = carName;
+        product  = contents;
+        ogCity = origin;
+        destination = dest;
+        weight = w;
+        miles = m; 
     }
     // engine constructor
     public Train(String car, String fin) {

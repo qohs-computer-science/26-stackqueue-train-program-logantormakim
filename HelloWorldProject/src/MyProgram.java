@@ -43,4 +43,26 @@ public class MyProgram {
 	{
 		System.out.println(e.getMessage());
 	} // end catch
+
+	String name = x.nextLine();
+	System.out.println(n);
+	while (!name.equals("END")) {
+		if (!name.substring(0,3).equals("CAR")) {
+			String name = x.nextLine();
+			String product = x.nextLine();
+			String ogCity = x.nextLine();
+			String destination = x.nextLine();
+			int weight = x.nextLine();
+			int miles = x.nextLine();
+			Train first = new Train(carName, contents, origin, dest, weight, miles);
+			track0.add(first);
+
+	}
+	}
+
+
+
+
+
 }
+
