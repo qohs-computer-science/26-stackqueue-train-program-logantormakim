@@ -47,7 +47,7 @@ public class MyProgram {
 	String name = x.nextLine();
 	System.out.println(n);
 	while (!name.equals("END")) {
-		if (!name.substring(0,3).equals("CAR")) {
+		if (name.substring(0,3).equals("CAR")) {
 			String name = x.nextLine();
 			String product = x.nextLine();
 			String ogCity = x.nextLine();
@@ -56,8 +56,27 @@ public class MyProgram {
 			int miles = x.nextLine();
 			Train first = new Train(carName, contents, origin, dest, weight, miles);
 			track0.add(first);
+		else {
+			String engName = x.nextLine();
+			String engDest = x.nextLine();
+			Train second = new Train(String car, String fin);
+		} 
 
-	}
+		}
+		//checks if car has more than 700 miles on it
+		Train t1 = track1.remove();
+		if (name.substring(0,3).equals("CAR")) {
+			while (!track0.isEmpty()) {
+				if (t1.getMiles() > 700) {
+					track1.add(t1);
+					t1.setMiles();
+				}
+			}
+		}
+
+		
+		if ()
+
 	}
 
 

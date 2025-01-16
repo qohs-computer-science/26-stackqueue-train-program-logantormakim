@@ -13,8 +13,8 @@ public class Train {
     }
     // engine constructor
     public Train(String car, String fin) {
-        car = name;
-        fin = destination;
+        engName = car;
+        engDest = fin;
     }
 
     //get methods
@@ -39,6 +39,11 @@ public class Train {
     }
 
     public getMiles () {
+        return miles;
+    }
+
+    public setMiles () {
+        miles = 100;
         return miles;
     }
 }
