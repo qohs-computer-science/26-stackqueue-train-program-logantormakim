@@ -6,43 +6,43 @@ public class Train {
     public Train(String carName, String contents, String ogCity, String dest, int w, int m) {
         name = carName;
         product  = contents;
-        ogCity = origin;
+        origin = ogCity;
         destination = dest;
         weight = w;
         miles = m; 
     }
     // engine constructor
     public Train(String car, String fin) {
-        engName = car;
-        engDest = fin;
+        name = car;
+        destination = fin;
     }
 
     //get methods
-    public getName () {
-        return name;
+    public String getName () {
+        return  name;
     }
     
-    public getProduct () {
-        return product;
+    public String getProduct () {
+        return  product;
     }
 
-    public getOgCity () {
-        return ogCity;
+    public String getOgCity () {
+        return origin;
     }
 
-    public getDestination () {
+    public String getDestination () {
         return destination;
     }
 
-    public getWeight () {
+    public int getWeight () {
         return weight;
     }
 
-    public getMiles () {
+    public int getMiles () {
         return miles;
     }
 
-    public setMiles () {
+    public int setMiles () {
         miles = 100;
         return miles;
     }
