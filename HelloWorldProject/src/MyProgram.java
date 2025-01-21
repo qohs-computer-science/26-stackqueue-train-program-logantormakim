@@ -20,8 +20,6 @@ public class MyProgram {
 		try{
 			File f = new File("HelloWorldProject/src/data.txt");
 			x = new Scanner (f);
-			String name = x.nextLine();
-			System.out.println(name);
 		}
 		catch(Exception e)
 		{
@@ -37,20 +35,12 @@ public class MyProgram {
 	int weightA = 0;
 	int weightB = 0;
 	int weightC = 0;
-	try{
-		File f = new File("HelloWorldProject/src/data.txt");
-		x = new Scanner (f);
-	}
-	catch (Exception e)
-	{
-		System.out.println(e.getMessage());
-	} // end catch
+	
 
 	String name = x.nextLine();
 	System.out.println(x);
 	while (!name.equals("END")) {
 		if (name.substring(0,3).equals("CAR")) {
-			 name = x.nextLine();
 			String product = x.nextLine();
 			String origin = x.nextLine();
 			String destination = x.nextLine();
@@ -62,9 +52,8 @@ public class MyProgram {
 			name = x.nextLine();
 		}
 		else {
-			String name2 = x.nextLine();
 			String destination = x.nextLine();
-			Train second = new Train( name2,  destination);
+			Train second = new Train( name,  destination);
 			track0.add(second);
 			name = x.nextLine();
 		} 
@@ -84,67 +73,83 @@ public class MyProgram {
 				if (t1.getName().substring(0,3).equals("ENG")) {
 					trackA.push(track0.remove());
 					System.out.println(trackA.peek().getName() + " going to " + trackA.pop().getDestination() + " with: ");
+				
 					while (!trackA.isEmpty()) {
 						System.out.println(trackA.peek().getName() + " has " + trackA.pop().getProduct());
 					} // end while
+				}//end if
 				else if (t1.getWeight() + weightA <= limitTrackA) {
 					trackA.push(track0.remove());
 					weightA+= t1.getWeight();
 				} // end else if
 
 				else {
-					trackA.push = new Train("ENG00000", "Trenton");
+					trackA.push(new Train("ENG00000", "Trenton"));
 					System.out.println(trackA.peek().getName() + " going to " + trackA.pop().getDestination() + " with ");
+				}
 					while (!trackA.isEmpty()) {
-						System.out.println(trackA.peek().getName() + " has " + trackA.pop().getProduct);
+						System.out.println(trackA.peek().getName() + " has " + trackA.pop().getProduct());
 					} // end while
 			
 				} // end if
-			} // end trenton
+		
 
 			else if (t1.getDestination().equals("Charlotte")) {
 				if (t1.getName().substring(0,3).equals("ENG")) {
 					trackB.push(track0.remove());
 					System.out.println(trackB.peek().getName() + " going to " + trackB.pop().getDestination() + " with: ");
 					while (!trackB.isEmpty()) {
-						System.out.println(trackB.peek().getName() + " has " + trackB.pop().getProduct);
+						System.out.println(trackB.peek().getName() + " has " + trackB.pop().getProduct());
 					} // end while
+				}//end if
 				else if (t1.getWeight() + weightB <= limitTrackB) {
 					trackB.push(track0.remove());
 					weightB+= t1.getWeight();
 				} // end else if
 
 				else {
-					trackB.push = new Train("ENG00000", "Charlotte");
+					trackB.push(new Train("ENG00000", "Charlotte"));
 					System.out.println(trackB.peek().getName() + " going to " + trackB.pop().getDestination() + " with ");
 					while (!trackB.isEmpty()) {
-						System.out.println(trackB.peek().getName() + " has " + trackB.pop().getProduct);
+						System.out.println(trackB.peek().getName() + " has " + trackB.pop().getProduct());
 					} // end while
-				}
-				} // end if
-			} // end charlotte 
+				} //end else
+			} // end if
+			 // end charlotte 
 		
 			else if (t1.getDestination().equals("Baltimore")) {
 				if (t1.getName().substring(0,3).equals("ENG")) {
 					trackC.push(track0.remove());
 					System.out.println(trackC.peek().getName() + " going to " + trackC.pop().getDestination() + " with: ");
 					while (!trackC.isEmpty()) {
-						System.out.println(trackC.peek().getName() + " has " + trackC.pop().getProduct);
+						System.out.println(trackC.peek().getName() + " has " + trackC.pop().getProduct());
 					} // end while
+				}
 				else if (t1.getWeight() + weightC <= limitTrackC) {
 					trackC.push(track0.remove());
 					weightC+= t1.getWeight();
 				} // end else if
 
 				else {
-					trackC.push = new Train("ENG00000", "Baltimore");
+					trackC.push(new Train("ENG00000", "Baltimore"));
 					System.out.println(trackC.peek().getName() + " going to " + trackC.pop().getDestination() + " with ");
 					while (!trackC.isEmpty()) {
-						System.out.println(track.peek().getName() + " has " + trackA.pop().getProduct);
+						System.out.println(trackC.peek().getName() + " has " + trackC.pop().getProduct());
 					} // end while
-				}
+				} //end else
 				} // end if
-			} // end baltimore		
+			// end baltimore		
+		
+		else {
+			while(!track0.isEmpty()) {
+				trackD.push(track0.remove());
+				System.out.println(trackD.peek().getName() + " going to " + trackD.pop().getDestination() + " with: ");
+					while (!trackC.isEmpty()) {
+						System.out.println(trackD.peek().getName() + " has " + trackD.pop().getProduct());
+					} // end while
+			}
+
+		}
 		
 		
 		} // end while
