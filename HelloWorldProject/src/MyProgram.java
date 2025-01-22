@@ -60,14 +60,19 @@ public class MyProgram {
 	
 	}
 		//checks if car has more than 700 miles on it
-		Train t1 = track1.remove();
+		Train t1 = track0.peek();
 		while (!track0.isEmpty()) {
-			if (name.substring(0,3).equals("CAR")) {
-				if (t1.getMiles() > 700) {
-					track1.add(t1);
-					t1.setMiles();
-				} // end if
+			if (t1.getMiles() > 700) {
+				track1.add(t1);
+				track0.remove();
+				t1= track0.peek();
 			} // end if 
+			else {
+				sort(track0,t1);
+				track0.remove();
+				t1= track0.peek();
+
+			}// end else
 
 			else if (t1.getDestination().equals("Trenton")) {
 				if (t1.getName().substring(0,3).equals("ENG")) {
@@ -75,9 +80,9 @@ public class MyProgram {
 					System.out.println(trackA.peek().getName() + " going to " + trackA.pop().getDestination() + " with: ");
 				
 					while (!trackA.isEmpty()) {
-						System.out.println(trackA.peek().getName() + " has " + trackA.pop().getProduct());
+						System.out.println(trackA.peek().getName() + " containing " + trackA.pop().getProduct());
 					} // end while
-				}//end if
+					weightA = 0;
 				else if (t1.getWeight() + weightA <= limitTrackA) {
 					trackA.push(track0.remove());
 					weightA+= t1.getWeight();
@@ -90,7 +95,7 @@ public class MyProgram {
 					while (!trackA.isEmpty()) {
 						System.out.println(trackA.peek().getName() + " has " + trackA.pop().getProduct());
 					} // end while
-			
+					weightA=0;
 				} // end if
 		
 
@@ -114,8 +119,8 @@ public class MyProgram {
 						System.out.println(trackB.peek().getName() + " has " + trackB.pop().getProduct());
 					} // end while
 				} //end else
-			} // end if
-			 // end charlotte 
+			} // end charlotte
+			  
 		
 			else if (t1.getDestination().equals("Baltimore")) {
 				if (t1.getName().substring(0,3).equals("ENG")) {

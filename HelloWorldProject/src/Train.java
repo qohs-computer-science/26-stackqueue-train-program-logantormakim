@@ -46,4 +46,13 @@ public class Train {
         miles = 100;
         return miles;
     }
+    
+    public String toString () {
+        if (name.substring(0,3).equals("CAR")) {
+              return name + " containing " + product;
+        }
+        else {
+            return name + " is leaving for " + destination + " with the following cars: ";
+        }
+    } // end toString
 }
