@@ -2,7 +2,8 @@
  * TODO: Logan Torma-Kim
  * TODO: 1/13/2025
  * TODO: 3
- * TODO: Sorts trains and makes sure they stay under weight limit and then send them on their way_____________________________________________________________________________________________________________________
+ * TODO: Sorts trains and makes sure they stay under weight limit and then send them on their way. 
+ * Sorts by the destination that they are going and outputs what they're carrying and their name________________________________________________________________________________________________________
  */
 import java.util.Scanner;
 import java.io.File;
@@ -25,13 +26,14 @@ public class MyProgram {
 		{
 			System.out.println(e.getMessage());
 		}
-	
+	//creating queues and stacks 
 	Queue <Train> track0 = new LinkedList <>();
 	Queue <Train> track1 = new LinkedList <>();
 	Stack <Train> trackA = new Stack <>();
 	Stack <Train> trackB = new Stack <>();
 	Stack <Train> trackC = new Stack <>();
-	Stack <Train> trackD = new Stack <>(); 
+	Stack <Train> trackD = new Stack <>();
+	//variables to track weight 
 	int weightA = 0;
 	int weightB = 0;
 	int weightC = 0;
